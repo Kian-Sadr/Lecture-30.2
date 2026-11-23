@@ -2,7 +2,16 @@ const { useState } = React;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Movie() {
-
+   let [title, setTitle] = useState("Schindler's List");
+   let [rating, setRating] = useState("R");
+   let [releaseYear, setReleaseYear] = useState(1993);
+   
+   function changeMovie(){
+      setTitle("Hidden Figures");
+      setRating("PG-13");
+      setReleaseYear(2016);
+   }
+   
    return (
       <>
          <h1>Favorite Movie</h1>
